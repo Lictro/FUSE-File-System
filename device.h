@@ -2,6 +2,8 @@
 #define device_h
 
 #include <stdio.h>
+#include <stdlib.h> 
+#include "bits.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -9,11 +11,12 @@ extern "C" {
 
 #define BLOCK_SIZE 4096
 
-int create_disk(char* path);
+int create_disk(char* path, int size);
 int open_disk(char* path);
 int close_disk();
 int read_block_disk(char* buff, int block);
 int write_block_disk(char* buff, int block);
+void format_disk(int size);
 
 #ifdef __cplusplus
 }

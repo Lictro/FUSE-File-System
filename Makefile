@@ -1,5 +1,5 @@
 TARGET=fuse
-C_SRCFILES=device.cpp main.cpp
+C_SRCFILES=device.cpp filesystem.cpp main.cpp
 OBJ_FILES=${C_SRCFILES:.cpp=.o}
 .PHONY: clean run
 .SUFFIXES:
@@ -15,4 +15,7 @@ run: $(TARGET)
 
 clean:
 	rm -f *.o
-	rm -f $(TARGET)	
+	rm -f $(TARGET)
+
+delete:
+	rm -f *.disk
