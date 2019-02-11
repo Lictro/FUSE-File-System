@@ -10,9 +10,11 @@ extern "C" {
 #endif
 
 #define BLOCK_SIZE 4096
+#define BASE_DIR_BLOCKS 12
 
 int create_disk(char* path, int size);
 int open_disk(char* path);
+int is_open();
 int close_disk();
 int read_block_disk(char* buff, int block);
 int write_block_disk(char* buff, int block);

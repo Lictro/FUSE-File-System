@@ -10,6 +10,6 @@
 #define BIT_TOGGLE(x,b)  ((x) ^= BIT(b))
 // BIT_WRITE(x,b,v) establece el valor 'v' de
 #define BIT_WRITE(x,b,v) ((v)? BIT_SET(x,b) : BIT_CLEAR(x,b))
- 
+
 // ES_PAR(x) regresa 0 cuando x no es par y algo diferente de 0 cuando es par
 #define ES_PAR(x) (!BIT_GET(x,0))

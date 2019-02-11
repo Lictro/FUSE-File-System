@@ -1,9 +1,10 @@
-#include "device.h"
+#include "fuse.h"
 #include "bits.h"
+#include <stdlib.h>
 
 int main(int argc, char *argv[]){
-    create_disk(argv[1], atoi(argv[2]));
-    close_disk();
+    system ("CLS");
+    CLI();
 
     /*int x = 3;
     for(int i=0; i < 32; i++){

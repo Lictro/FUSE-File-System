@@ -1,14 +1,14 @@
 TARGET=fuse
-C_SRCFILES=device.cpp filesystem.cpp main.cpp
+C_SRCFILES=device.cpp filesystem.cpp fuse.cpp main.cpp
 OBJ_FILES=${C_SRCFILES:.cpp=.o}
 .PHONY: clean run
 .SUFFIXES:
 
 $(TARGET): $(OBJ_FILES)
-	gcc -g -o $@ $(OBJ_FILES)
+	g++ -std=c=++11 -g -o $@ $(OBJ_FILES)
 
 %.o: %.cpp
-	gcc -g -c -o $@ $<
+	g++ -std=c++11 -g -c -o $@ $<
 
 run: $(TARGET)
 	./$(TARGET) input1.txt
